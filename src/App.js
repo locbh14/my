@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 import User from './components/User';
-import Post from './components/Post';
+import Login from './components/Login';
 
 
 const App = () => {
@@ -12,8 +12,8 @@ const App = () => {
     <Router>
       <Routes>
 
-        <Route element={<User />} path="/user"></Route>
-        <Route element={<Post />} path="/post"></Route>
+        <Route element={<User />} path="/admin/user"></Route>
+        <Route element={<Login />} path="/admin/login"></Route>
 
       </Routes>
       
