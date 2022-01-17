@@ -70,7 +70,11 @@ const User = () => {
                         <i class="far fa-user-circle navbar-header-icon"></i>
                         <span class="header__navbar-user-name">Bùi Hoàng Lọc</span>
                         <ul class="header__navbar-account-menu">
-                            <li class="header__navbar-account-Logout">Logout</li>
+                
+                            <li class="header__navbar-account-Logout">
+                                <a href="http://localhost:3000/admin/login" className="logout" >Logout</a>
+                            
+                            </li>
                         </ul>
 
                     </div>
@@ -86,10 +90,10 @@ const User = () => {
                                     </h3>
                                     <ul class="category-list">
                                         <li class="category-item category-item--active">
-                                            <a href="http://localhost:3000/user" class="category-item__link ">Users</a>
+                                            <a href="http://localhost:3000/admin/user" class="category-item__link ">Users</a>
                                         </li>
                                         <li class="category-item ">
-                                            <a href="http://localhost:3000/user" class="category-item__link">Posts</a>
+                                            <a href="http://localhost:3000/admin/user" class="category-item__link">Posts</a>
                                         </li>
 
                                     </ul>
