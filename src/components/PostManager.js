@@ -1,9 +1,8 @@
 import React from 'react'
-import AdminUserTableItem from './AdminUserTableItem';
+import AdminTableItem from './AdminTableItem';
 import './css/base.css';
 import './css/User.css';
-
-const AdminUserTable = ({users}) => {
+const PostManager = ({ posts }) => {
     return (
         <div class="home-product">
             <div class="grid__row home-product__edits">
@@ -21,7 +20,7 @@ const AdminUserTable = ({users}) => {
                 </div>
             </div>
             <div class="grid__row home-product__option">
-                <span className="home-product__user-text"> User</span>
+                <span className="home-product__user-text"> Post</span>
             </div>
             <div className="home-product__tilter">
                 <div className="home-product__tilter--header">
@@ -30,21 +29,24 @@ const AdminUserTable = ({users}) => {
                             Id
                         </div>
                         <div class="grid__column-2-product">
-                            Name
+                            Title
                         </div>
                         <div class="grid__column-2-product">
-                            Avatar
+                            Date
                         </div>
                         <div class="grid__column-2-product">
-                            Status
+                            Likes
+                        </div>
+                        <div class="grid__column-2-product">
+                            Dislikes
                         </div>
                         <div class="grid__column-2-product">
                             Choose
                         </div>
                     </div>
-
                 </div>
-                {users.map((item, i) => <AdminUserTableItem id={item._id} name={item.username} avatar={""} status={""}  />)}
+                
+                {posts.map((item, i) => <AdminTableItem id={item._id} title={item.title} date={"sd"} dislikes={0} likes={0} />)}
             </div>
 
         </div>
@@ -52,4 +54,4 @@ const AdminUserTable = ({users}) => {
     );
 }
 
-export default AdminUserTable
+export default PostManager

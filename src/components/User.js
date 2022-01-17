@@ -5,6 +5,7 @@ import './css/User.css';
 import './css/base.css';
 import './assets/fontawesome-free-5.15.4-web/js/all.js';
 import AdminUserTable from "./AdminUserTable";
+import PostManager from "./PostManager";
 
 const users = [
     {
@@ -30,9 +31,31 @@ const users = [
     {
         _id:"1",
         username:"a",
+    },
+    {
+        _id:"1",
+        username:"a",
     }
 ]
-
+const posts=[
+    {
+        _id: "1",
+        title: "a",
+    },
+    {
+        _id: "1",
+        title: "a",
+    },
+    {
+        _id: "1",
+        title: "a",
+    },
+    {
+        _id: "1",
+        title: "a",
+    }
+]
+const edits=[]
 const User = () => {
     return (
         <div id="wrapper">
@@ -61,13 +84,12 @@ const User = () => {
                                         <i class="category__heading-icon fas fa-list"></i>
                                         Menu
                                     </h3>
-
                                     <ul class="category-list">
                                         <li class="category-item category-item--active">
                                             <a href="http://localhost:3000/user" class="category-item__link ">Users</a>
                                         </li>
                                         <li class="category-item ">
-                                            <a href="http://localhost:3000/post" class="category-item__link">Posts</a>
+                                            <a href="http://localhost:3000/user" class="category-item__link">Posts</a>
                                         </li>
 
                                     </ul>
@@ -75,8 +97,15 @@ const User = () => {
                             </div>
 
                             <div class="grid__column-10">
+                                <div className="grid__column-10-part">
                                     <AdminUserTable users={users}/>
+                                </div>
+                                <div className="grid__column-10-part">
+                                    <PostManager posts={posts}/>
+                                </div>
+                                    
                             </div>
+
 
                         </div>
                     </div>
